@@ -1,10 +1,21 @@
+.titulo{
+    text-align: center;
+    color: rgb(255, 0, 0); transform: scale(2); transition: all 3s;
+}
+body{
+    background-color: rgb(77, 249, 152);
+}
+.id{
+    text-align: center;
+    color: black;
+}
 .mustache{
     width: 180px;
     height: 180px;
-    left: 100px;
+    left: 400px;
     border-radius: 50%;
     position: absolute;
-    color: black;
+    color: rgb(0, 0, 0);
     box-shadow: 
     150px 240px 0 0 currentColor,
     300px 240px 0 0 currentColor;
@@ -34,4 +45,32 @@
     border-radius: 0 0 100% 0;
     transform: rotate(40deg);
     transform-origin: left 210px;
+}
+.mustache:before {
+    animation: shakeLeft 1s ease-in-out infinite;
+}
+.mustache:after {
+    animation: shakeRight 1s ease-in-out infinite;
+}
+@keyframes shakeLeft {
+    0%{
+        transform: rotate(-50deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+}
+@keyframes shakeRight {
+    0%{
+        transform: rotate(50 deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(50deg);
+    }
 }
